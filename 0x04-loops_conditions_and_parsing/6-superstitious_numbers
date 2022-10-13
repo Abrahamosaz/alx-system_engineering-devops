@@ -4,6 +4,8 @@
 index=1
 while [ "$index" -le 20 ]
 do
+	echo "$index"
+
 	case "$index" in
 		4)
 			echo "bad luck from china";;
@@ -12,7 +14,6 @@ do
 		17)
 			echo "bad luck from italy";;
 		*)
-			echo "$index"
 		esac
 	(( index++ ))
 done
