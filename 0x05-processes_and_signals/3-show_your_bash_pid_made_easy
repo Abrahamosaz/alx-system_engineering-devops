@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#This script show te process pid and name of the bash process
+pgrep -l bash
