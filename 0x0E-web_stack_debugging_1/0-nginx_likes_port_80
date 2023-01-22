@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# configre a server to listening on port 80 on all server active IPV4 addresses
+
+sudo sed -i "s/8080/80/" /etc/nginx/sites-available/default
+sudo service nginx restart
