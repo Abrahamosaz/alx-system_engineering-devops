@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-#connect using file ~/.ssh/school
-
-ssh -i ~/.ssh/school ubuntu@35.174.200.45
