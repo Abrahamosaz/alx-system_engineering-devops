@@ -4,6 +4,7 @@
 
 def display_details(user_id=None):
     """display data from the restful api"""
+    error = False
     try:
         user_response = requests.get(
                 'https://jsonplaceholder.typicode.com/users')
@@ -11,7 +12,10 @@ def display_details(user_id=None):
                 'https://jsonplaceholder.typicode.com/todos')
     except Exception as err:
         print(err.args)
+        error = True
 
+    if error:
+        return
     users = json.loads(user_response.text)
     user_tasks = json.loads(user_tasks.text)
     user_list = [user for user in users if user.get("id") == int(user_id)]
